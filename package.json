@@ -1,6 +1,7 @@
 {
   "name": "portfolio-elias",
   "version": "0.1.0",
+  "homepage": "https://elias06110.github.io/Portfolio-Elias-Benabou/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
