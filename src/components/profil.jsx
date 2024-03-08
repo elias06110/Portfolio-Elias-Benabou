@@ -7,13 +7,18 @@ import Js from "../images/js.png";
 import reactI from "../images/react.png";
 import sass from "../images/sass.png";
 
+import { useTranslation } from "react-i18next";
+
 export default function Profil() {
+
+  const { t} = useTranslation();
+
   return (
     <section id="profil" data-aos="fade-in">
       <div className="description flex">
         <div className="profile-details">
-          <h1>Hi, I'm Elias,</h1>
-          <h2>Front-End React developer based in Cannes 🇫🇷</h2>
+          <h1>{t("description.hi")}</h1>
+          <h2>{t("description.dev")}</h2>
           <div className="socials flex">
             <a href="https://github.com/elias06110" target="_blank"   rel="noreferrer"> 
               <img className="logo" src={githubLogo} alt=""></img>
@@ -30,12 +35,15 @@ export default function Profil() {
       </div>
       <div className="tech">
         <h3>Tech Stack</h3>
+       
         <div className="bar"></div>
+        <div className="tech_grid">
         <img className="icon" alt=""src={html}></img>
         <img className="icon"  alt=""src={Css}></img>
         <img className="icon" alt="" src={Js}></img>
         <img className="icon" alt=""  src={reactI}></img>
         <img className="icon" alt="" src={sass}></img>
+        </div>
       </div>
     </section>
   );

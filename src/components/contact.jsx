@@ -4,7 +4,11 @@ import LinkedIn from "../images/linkedin.webp";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
+import { useTranslation } from "react-i18next"
+
 export default function Contact() {
+
+  const { t} = useTranslation();
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -28,7 +32,7 @@ export default function Contact() {
   return (
     <section id="contact">
       <div className="contact-container flex">
-        <h1>Contact Me</h1>
+        <h1>{t("description.contact")}</h1>
         <div className="contact-details border flex">
           <img className="icon" src={Mail}></img>
           <p>
@@ -41,12 +45,12 @@ export default function Contact() {
         </div>
       </div>
       <div className="flex column">
-        <h2>Or directly here</h2>
+        <h2>{t("description.or")}</h2>
         <form ref={form} onSubmit={sendEmail} className="flex column form">
           <input
             className="input"
             type="text"
-            placeholder="Full name"
+            placeholder={t("description.name")}
             name="user_name"
             required
           />
@@ -60,7 +64,7 @@ export default function Contact() {
           <input
             className="input"
             type="text"
-            placeholder="Subject"
+            placeholder={t("description.subject")}
             name="subject"
             required
           />
@@ -73,7 +77,7 @@ export default function Contact() {
             required
           />
           <button type="submit" className="btn-form">
-            Send message
+          {t("description.message")}
           </button>
         </form>
       </div>

@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.6de7e08f.css",
-    "main.js": "/static/js/main.3c47ae8e.js",
-    "static/media/Kasa.PNG": "/static/media/Kasa.32f6c26e1ee39c38e1f9.PNG",
-    "static/media/Sophie.PNG": "/static/media/Sophie.f8f6360d6c2d8a569071.PNG",
-    "static/media/grimoire.PNG": "/static/media/grimoire.ed892cd2317705bf2cc0.PNG",
-    "static/media/Booki.PNG": "/static/media/Booki.65e4ed1ebbbee6d8e585.PNG",
-    "static/media/photo.jpg": "/static/media/photo.43557def6cdff4b04d70.jpg",
-    "static/media/react.png": "/static/media/react.8a6fc0a24a800d1e0f4a.png",
-    "static/media/css.png": "/static/media/css.015d4e7819fe71e19c25.png",
-    "static/media/sass.png": "/static/media/sass.c5da83bb9ff45b84e0e7.png",
-    "static/media/js.png": "/static/media/js.262557e62c46ad3b899d.png",
-    "static/media/linkedin.webp": "/static/media/linkedin.3a7f41900ec6fcac860d.webp",
-    "static/media/checkmark.png": "/static/media/checkmark.86728d9a224a2c7c95d4.png",
-    "static/media/Logo-grimoire.png": "/static/media/Logo-grimoire.036c0e9b69effdd0abe8.png",
-    "static/media/html.PNG": "/static/media/html.ff3cf75e3b7cbb4ea77c.PNG",
-    "index.html": "/index.html",
-    "main.6de7e08f.css.map": "/static/css/main.6de7e08f.css.map",
-    "main.3c47ae8e.js.map": "/static/js/main.3c47ae8e.js.map"
+    "main.css": "/portfolio/static/css/main.6de7e08f.css",
+    "main.js": "/portfolio/static/js/main.53a196e0.js",
+    "static/media/Kasa.PNG": "/portfolio/static/media/Kasa.32f6c26e1ee39c38e1f9.PNG",
+    "static/media/Sophie.PNG": "/portfolio/static/media/Sophie.f8f6360d6c2d8a569071.PNG",
+    "static/media/grimoire.PNG": "/portfolio/static/media/grimoire.ed892cd2317705bf2cc0.PNG",
+    "static/media/Booki.PNG": "/portfolio/static/media/Booki.65e4ed1ebbbee6d8e585.PNG",
+    "static/media/photo.jpg": "/portfolio/static/media/photo.43557def6cdff4b04d70.jpg",
+    "static/media/react.png": "/portfolio/static/media/react.8a6fc0a24a800d1e0f4a.png",
+    "static/media/css.png": "/portfolio/static/media/css.015d4e7819fe71e19c25.png",
+    "static/media/sass.png": "/portfolio/static/media/sass.c5da83bb9ff45b84e0e7.png",
+    "static/media/js.png": "/portfolio/static/media/js.262557e62c46ad3b899d.png",
+    "static/media/linkedin.webp": "/portfolio/static/media/linkedin.3a7f41900ec6fcac860d.webp",
+    "static/media/checkmark.png": "/portfolio/static/media/checkmark.86728d9a224a2c7c95d4.png",
+    "static/media/Logo-grimoire.png": "/portfolio/static/media/Logo-grimoire.036c0e9b69effdd0abe8.png",
+    "static/media/html.PNG": "/portfolio/static/media/html.ff3cf75e3b7cbb4ea77c.PNG",
+    "index.html": "/portfolio/index.html",
+    "main.6de7e08f.css.map": "/portfolio/static/css/main.6de7e08f.css.map",
+    "main.53a196e0.js.map": "/portfolio/static/js/main.53a196e0.js.map"
   },
   "entrypoints": [
     "static/css/main.6de7e08f.css",
-    "static/js/main.3c47ae8e.js"
+    "static/js/main.53a196e0.js"
   ]
 }

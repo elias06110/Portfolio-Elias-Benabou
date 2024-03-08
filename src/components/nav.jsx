@@ -1,56 +1,79 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
-function Navbar() {
-
-const [showLinks,setShowLinks]=useState(false)
-
-const handleShowLinks=()=>{
-    setShowLinks(!showLinks)
-}
-
-const handleLinkClick = () => {
-  setShowLinks(false);
+const lngs = {
+  en: { nativeName: "English" },
+  fr: { nativeName: "Français" },
 };
 
-  
-return (
-  <header id="header">
-    <nav className={`${showLinks ? "show-nav" : "hide-nav"}`}>
-      <p>Elias Benabou</p>
+function Navbar() {
+  const { t, i18n } = useTranslation();
 
-      <ul className="nav-links flex">
-        <li>
-          <a href="#profil" onClick={handleLinkClick}>
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="#about" onClick={handleLinkClick}>
-            About
-          </a>
-        </li>
-        <li>
-          <a href="#skills" onClick={handleLinkClick}>
-            Skills
-          </a>
-        </li>
-        <li>
-          <a href="#projects" onClick={handleLinkClick}>
-            Projects
-          </a>
-        </li>
-        <li>
-          <a href="#contact" onClick={handleLinkClick}>
-            Contact
-          </a>
-        </li>
-      </ul>
-      <button className="navbar-burger" onClick={handleShowLinks}>
-        <span className="burger-bar"></span>
-      </button>
-    </nav>
-  </header>
-);
+  const [showLinks, setShowLinks] = useState(false);
+
+  const handleShowLinks = () => {
+    setShowLinks(!showLinks);
+  };
+
+  const handleLinkClick = () => {
+    setShowLinks(false);
+  };
+
+  return (
+    <header id="header">
+      <nav className={`${showLinks ? "show-nav" : "hide-nav"}`}>
+      <h1 className="elias">Portfolio</h1>
+        
+        <div className="trad-container">
+          
+          {Object.keys(lngs).map((lng) => (
+            <button className="trad"
+              key={lng}
+              style={{
+                fontWeight: i18n.resolvedLanguage === lng ? "bold" : "normal",
+              }}
+              type="submit"
+              onClick={() => i18n.changeLanguage(lng)}
+            >
+              {lngs[lng].nativeName}
+            </button>
+          ))}
+        </div>
+        
+
+        <ul className="nav-links flex">
+          <li>
+            <a href="#profil" onClick={handleLinkClick}>
+              {t("description.home")}
+            </a>
+          </li>
+          <li>
+            <a href="#about" onClick={handleLinkClick}>
+              {t("description.about")}
+            </a>
+          </li>
+          <li>
+            <a href="#skills" onClick={handleLinkClick}>
+              {t("description.skills")}
+            </a>
+          </li>
+          <li>
+            <a href="#projects" onClick={handleLinkClick}>
+              {t("description.projets")}
+            </a>
+          </li>
+          <li>
+            <a href="#contact" onClick={handleLinkClick}>
+             Contact
+            </a>
+          </li>
+        </ul>
+        <button className="navbar-burger" onClick={handleShowLinks}>
+          <span className="burger-bar"></span>
+        </button>
+      </nav>
+    </header>
+  );
 }
 
 export default Navbar;
