@@ -40,7 +40,7 @@ export default function Contact() {
           </p>
           <img className="icon" src={LinkedIn}></img>
           <p>
-            <a href="#"></a>LinkedIn
+            <a href="https://www.linkedin.com/in/elias-benabou-3782502b7/">LinkedIn</a>
           </p>
         </div>
       </div>

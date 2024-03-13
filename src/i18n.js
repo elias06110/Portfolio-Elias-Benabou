@@ -94,7 +94,7 @@ i18n
             booki: `Booki, un projet où j'ai pris en charge le développement HTML et CSS, est un site web convivial qui simplifie le processus de recherche d'hébergements et d'activités dans n'importe quelle ville choisie. J'ai développé une interface intuitive qui améliore l'expérience utilisateur, permettant une exploration sans problème des options d'hébergement et des expériences locales.`,
             live:'Démo en temps réel',
             name:'Nom complet',
-            contact:'Me contacter ici',
+            contact:'Contactez moi ici',
             or:'Ou directement la',
             message:'Envoyer',
             subject:'Sujet'

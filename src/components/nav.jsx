@@ -23,25 +23,7 @@ function Navbar() {
     <header id="header">
       <nav className={`${showLinks ? "show-nav" : "hide-nav"}`}>
       <h1 className="elias">Portfolio</h1>
-        
-        <div className="trad-container">
-          
-          {Object.keys(lngs).map((lng) => (
-            <button className="trad"
-              key={lng}
-              style={{
-                fontWeight: i18n.resolvedLanguage === lng ? "bold" : "normal",
-              }}
-              type="submit"
-              onClick={() => i18n.changeLanguage(lng)}
-            >
-              {lngs[lng].nativeName}
-            </button>
-          ))}
-        </div>
-        
-
-        <ul className="nav-links flex">
+      <ul className="nav-links flex">
           <li>
             <a href="#profil" onClick={handleLinkClick}>
               {t("description.home")}
@@ -68,9 +50,29 @@ function Navbar() {
             </a>
           </li>
         </ul>
+        <div className="trad-container">
+          
+          {Object.keys(lngs).map((lng) => (
+            <button className="trad"
+              key={lng}
+              style={{
+                fontWeight: i18n.resolvedLanguage === lng ? "bold" : "normal",
+              }}
+              type="submit"
+              onClick={() => i18n.changeLanguage(lng)}
+            >
+              {lngs[lng].nativeName}
+            </button>
+          ))}
+        </div>
+        
+
+        
+        <div className="burger">
         <button className="navbar-burger" onClick={handleShowLinks}>
           <span className="burger-bar"></span>
         </button>
+        </div>
       </nav>
     </header>
   );

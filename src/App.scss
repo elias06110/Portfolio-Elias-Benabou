@@ -1,17 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+html{
+  overflow-x:hidden;
+  max-width: 100%;
+}
+
 body {
-  margin: 0 auto;
+  margin: 0 ;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.gap{
+  gap: 20px;
 }
 
 #header {
-  width: 100%;
   position: fixed;
-  border-bottom: 1px solid gray;
   background-color: white;
   top: 0;
   z-index: 1000;
+  width: 100%;
+}
+
+.hide-nav {
+  border-bottom:2px solid black ;
 }
 
 h1,
@@ -92,10 +106,11 @@ nav,
 .nav-links {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   list-style: none;
   text-decoration: none;
   padding: 1rem;
+  gap: 50px;
 }
 
 .nav-links {
@@ -103,6 +118,13 @@ nav,
   font-size: 1.5rem;
   text-decoration: none;
 }
+
+.bar {
+  width: 1.5px;
+  height: 40px;
+  background-color: black;
+}
+
 
 .navbar-burger {
   width: 40px;
@@ -132,6 +154,11 @@ a:hover {
   transform: scale(1.2);
 }
 
+.burger{
+  width: 50px;
+  height: 50px;
+}
+
 .description {
   gap: 50px;
   padding-bottom: 100px;
@@ -147,7 +174,7 @@ a:hover {
   width: 250px;
   border-radius: 50%;
   object-fit: cover;
-  z-index: 1;
+  z-index: -99;
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -327,45 +354,15 @@ a:hover {
   margin-top: 50px;
 }
 
-@media screen and (max-width: 500px) {
-  .contact-details {
-    flex-direction: column;
-    gap: 0px;
-  }
-}
-
-.input {
-  border-radius: 2rem;
-  font-family: "Poppins", sans-serif;
-  height: 20px;
-  padding: 1rem;
-}
 
 .input1 {
   border-radius: 2rem;
   padding: 1rem;
-  width: 50%;
+
+  height: 150px;
   font-family: "Poppins", sans-serif;
 }
 
-.form {
-  gap: 20px;
-}
-
-.btn-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  width: 50%;
-  height: 50px;
-  border-radius: 2rem;
-  margin-bottom: 50px;
-  margin-top: 20px;
-  background-color: white;
-  border: solid black 1px;
-  font-family: "Poppins", sans-serif;
-}
 
 .tech {
   display: flex;
@@ -381,12 +378,6 @@ a:hover {
   gap: 20px;
 }
 
-.bar {
-  width: 1.5px;
-  height: 40px;
-  background-color: black;
-}
-
 .trad {
   cursor: pointer;
   border-radius: 2rem;
@@ -394,6 +385,7 @@ a:hover {
   border: solid black 1px;
   font-family: "Poppins", sans-serif;
   padding: 0.75rem;
+  width: 100%;
 }
 
 .trad-container {
@@ -404,16 +396,14 @@ a:hover {
   gap: 10px;
 }
 
-@media screen and (max-width: 888px) {
-  .trad-container {
-    flex-direction: column;
-  }
+@media screen and (max-width: 1200px) {
+.nav-links{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes égales */
+  grid-template-rows: repeat(2, auto) auto; 
+}
 }
 
-.elias {
-  font-family: "Bebas Neue", sans-serif;
-  margin: 0;
-}
 
 @media screen and (max-width: 768px) {
   .project-links {
@@ -429,13 +419,14 @@ a:hover {
     height: 100vh;
     right: -150vw;
     visibility: hidden;
-
+padding: 0;
     gap: 60px;
     background-color: white;
     margin: 0;
   }
   .project-container {
     padding: 2rem;
+    width: 60%;
   }
 
   p {
@@ -491,6 +482,7 @@ a:hover {
   }
   .photo {
     width: 190px;
+  
   }
 
   .burger-bar,
@@ -537,4 +529,80 @@ a:hover {
     padding-top: 100px;
     padding-bottom: 100px;
   }
+}
+
+
+@media screen and (max-width: 500px) {
+  .contact-details {
+    flex-direction: column;
+    gap: 0px;
+  }
+  .input1{
+    width: 70%;
+  }
+  h1{
+    font-size: 3rem;
+  }
+
+  .hide-nav{
+    gap: 20px;
+  }
+}
+
+.input {
+  border-radius: 2rem;
+  font-family: "Poppins", sans-serif;
+  height: 20px;
+  padding: 1rem;
+}
+
+
+.form {
+  gap: 20px;
+}
+
+.btn-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 50%;
+  height: 50px;
+  border-radius: 2rem;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  background-color: white;
+  border: solid black 1px;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+
+
+
+@media screen and (max-width: 888px) {
+  .trad-container {
+    flex-direction: column;
+  }
+}
+
+.elias {
+  font-family: "Bebas Neue", sans-serif;
+  margin: 0;
+}
+
+
+.footer{
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.rights{
+  color: white;
 }

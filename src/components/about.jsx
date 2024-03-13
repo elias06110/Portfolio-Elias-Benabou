@@ -1,5 +1,5 @@
 import education from "../images/education.png";
-
+import open from "../images/open.png"
 import { useTranslation } from "react-i18next";
 
 export default function About() {
@@ -20,7 +20,7 @@ export default function About() {
             <h2>{t("description.education")}</h2>
             <img className="icon" src={education}></img>
             </div> 
-            <h3>{t("description.program")}</h3>
+           <div className="flex gap"> <h3>{t("description.program")}</h3> <img className="icon" src={open}></img></div>
             <h3>{t("description.self")}</h3>
           </div>
         </div>
