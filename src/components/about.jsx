@@ -18,9 +18,9 @@ export default function About() {
           <div className="about">
             <div className="flex">
             <h2>{t("description.education")}</h2>
-            <img className="icon" src={education}></img>
+            <img alt="icon" className="icon" src={education}></img>
             </div> 
-           <div className="flex gap"> <h3>{t("description.program")}</h3> <img className="icon" src={open}></img></div>
+           <div className="flex gap"> <h3>{t("description.program")}</h3> <img alt="" className="icon" src={open}></img></div>
             <h3>{t("description.self")}</h3>
           </div>
         </div>
