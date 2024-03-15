@@ -1,18 +1,31 @@
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 import Mail from "../images/mail.png";
 import LinkedIn from "../images/linkedin.webp";
 
-import { useRef } from "react";
-import emailjs from "@emailjs/browser";
-
-import { useTranslation } from "react-i18next"
-
 export default function Contact() {
-
-  const { t} = useTranslation();
+  const { t } = useTranslation();
   const form = useRef();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false); // Ajout de l'état de succès
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    if (!name.trim() || !email.trim() || !subject.trim() || !message.trim()) {
+      setError("Veuillez remplir tous les champs.");
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      setError("Veuillez entrer une adresse email valide.");
+      return;
+    }
 
     emailjs
       .sendForm("service_s3zp4oq", "template_33myixi", form.current, {
@@ -21,12 +34,22 @@ export default function Contact() {
       .then(
         () => {
           console.log("SUCCESS!");
+          setSuccess(true); // Définir l'état de succès à true
+          setName(""); // Réinitialiser les états des champs
+          setEmail("");
+          setSubject("");
+          setMessage("");
         },
         (error) => {
           console.log("FAILED...", error.text);
         }
       );
-    e.target.reset();
+    setError(""); // Réinitialiser les erreurs
+  };
+
+  const isValidEmail = (email) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
   };
 
   return (
@@ -34,11 +57,11 @@ export default function Contact() {
       <div className="contact-container flex">
         <h1>{t("description.contact")}</h1>
         <div className="contact-details border flex">
-          <img className="icon" src={Mail}></img>
+          <img alt="" className="icon" src={Mail}></img>
           <p>
             <a href="mailto:elias06110@gmail.com">elias06110@gmail.com</a>
           </p>
-          <img className="icon" src={LinkedIn}></img>
+          <img alt="" className="icon" src={LinkedIn}></img>
           <p>
             <a href="https://www.linkedin.com/in/elias-benabou-3782502b7/">LinkedIn</a>
           </p>
@@ -52,13 +75,17 @@ export default function Contact() {
             type="text"
             placeholder={t("description.name")}
             name="user_name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             required
           />
           <input
             className="input"
-            type="text"
+            type="email"
             placeholder="Email"
             name="user_email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
           <input
@@ -66,18 +93,24 @@ export default function Contact() {
             type="text"
             placeholder={t("description.subject")}
             name="subject"
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
             required
           />
           <textarea
-          placeholder="Message"
+            placeholder="Message"
             className="input1"
             cols="30"
-            row="10"
+            rows="10"
             name="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             required
           />
+          {error && <p className="error">{error}</p>}
+          {success && <p className="success">{t("description.send")}</p>}
           <button type="submit" className="btn-form">
-          {t("description.message")}
+            {t("description.message")}
           </button>
         </form>
       </div>

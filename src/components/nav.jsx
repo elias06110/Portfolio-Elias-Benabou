@@ -29,7 +29,7 @@ function Navbar() {
               {t("description.home")}
             </a>
           </li>
-          <li>
+          <li className="li">
             <a href="#about" onClick={handleLinkClick}>
               {t("description.about")}
             </a>

@@ -11,10 +11,13 @@ body {
   overflow-x: hidden;
   position: relative;
 }
+.li{white-space: nowrap;}
 
 .gap{
   gap: 20px;
 }
+
+
 
 #header {
   position: fixed;
@@ -109,7 +112,6 @@ nav,
   justify-content: center;
   list-style: none;
   text-decoration: none;
-  padding: 1rem;
   gap: 50px;
 }
 
@@ -125,6 +127,13 @@ nav,
   background-color: black;
 }
 
+.about-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+}
 
 .navbar-burger {
   width: 40px;
@@ -166,9 +175,7 @@ a:hover {
   width: 100%;
 }
 
-#profil {
-  margin-bottom: 100px;
-}
+
 
 .photo {
   width: 250px;
@@ -270,35 +277,17 @@ a:hover {
   justify-content: center;
   flex-direction: column;
 }
-
-@media screen and (max-width: 950px) {
-  .experience-container {
-    width: 50%;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-}
-
 .exp {
   display: flex;
   justify-content: center;
   width: 100%;
   gap: 50px;
-  margin-bottom: 100px;
   margin-top: 50px;
 }
 
-@media screen and (max-width: 950px) {
-  .exp {
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
+
+
+
 
 .experience-skills {
   display: flex;
@@ -324,7 +313,7 @@ a:hover {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 110px;
   width: 100%;
 }
 
@@ -335,9 +324,47 @@ a:hover {
 }
 
 .about-section {
-  width: 50%;
+  width: 100%;
   gap: 50px;
 }
+
+.about-img-container{
+  position: relative;
+}
+
+.text{
+  width: 400px;
+}
+
+
+.coding{
+  width: 60%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.circle{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  background-color: white;
+  border-radius: 50%;
+  bottom: -30%;
+  position: absolute;
+  top: 60%; /* Ajustez la position verticale */
+  left: 80%;
+  height:50%;
+  border: 2px solid black;}
+
+
+.aboutimg{
+  width: 450px;
+  border-radius: 15px;
+height: auto;}
 
 //Contact
 
@@ -358,7 +385,6 @@ a:hover {
 .input1 {
   border-radius: 2rem;
   padding: 1rem;
-
   height: 150px;
   font-family: "Poppins", sans-serif;
 }
@@ -409,10 +435,16 @@ a:hover {
   .project-links {
     flex-direction: column;
   }
+
+  .aboutimg{
+    width: 300px;
+  }
+
   .kasa {
     width: 70%;
   }
   .nav-links {
+    display: flex;
     flex-direction: column;
     position: fixed;
     bottom: 0;
@@ -546,7 +578,13 @@ padding: 0;
 
   .hide-nav{
     gap: 20px;
+    padding: 0.5rem;
   }
+  .about{
+    width: 60%;
+  }
+.text{width: 55%;}
+  
 }
 
 .input {
@@ -554,6 +592,7 @@ padding: 0;
   font-family: "Poppins", sans-serif;
   height: 20px;
   padding: 1rem;
+  width: 100%;
 }
 
 
@@ -584,6 +623,7 @@ padding: 0;
 @media screen and (max-width: 888px) {
   .trad-container {
     flex-direction: column;
+    gap: 5px;
   }
 }
 
@@ -605,4 +645,45 @@ padding: 0;
 
 .rights{
   color: white;
+}
+
+@media screen and (max-width: 950px) {
+  .experience-container {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .exp {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-text{
+
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 300px) {
+
+.aboutimg{width: 200px;}
+
+h1{
+  font-size: 2rem;
+}
+.about{
+  padding: 2.5rem;
+}
+.experience-container{
+  width: 62%;
+}
 }

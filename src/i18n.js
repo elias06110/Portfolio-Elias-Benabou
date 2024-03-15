@@ -24,7 +24,6 @@ i18n
             about: "About",
             skills: "Skills",
             projets: "Projects",
-            contact: "Contact",
             hi: `Hi, I'm Elias,`,
             dev: "Front-End React JS developer based in Cannes 🇫🇷",
             education: "Education",
@@ -59,13 +58,16 @@ i18n
             accommodations and activities in any chosen city. I developed an
             intuitive interface that enhances the user experience, allowing
             seamless exploration of lodging options and local experiences.`,
-            live:'Live demo',
-            name:'Full name',
-            contact:'Contact me',
-            or:'Or directly here',
-            message:'Send',
-            subject:'Subject'
-           
+            live: "Live demo",
+            name: "Full name",
+            contact: "Contact me",
+            or: "Or directly here",
+            message: "Send",
+            subject: "Subject",
+            send: "Message sent",
+            abouttext1:`Hello there 👋 I'm Elias Benabou, a passionate and creative web developer dedicated to crafting clean and functional websites.`,
+
+            abouttext2:`I am eager to gain experience and ready to contribute to the success of your project, so do not hesitate to contact me and let's work together!`
           },
         },
       },
@@ -76,7 +78,7 @@ i18n
             about: "A propos",
             skills: "Compétences",
             projets: "Projets",
-            contact: "Contact",
+
             hi: `Bonjour, je m'appelle Elias`,
             dev: "Developpeur Front-End React JS basé a Cannes 🇫🇷",
             education: "Formation",
@@ -92,14 +94,17 @@ i18n
             grim: `En exploitant mes compétences en développement backend, j'ai créé l'ossature de cette plateforme, permettant aux utilisateurs de noter et de critiquer des livres tout en établissant un système de référence robuste. L'infrastructure backend gère de manière transparente les données, les comptes utilisateur et les interactions, assurant une solution fiable et évolutive. Mes contributions à ce projet incluent la mise en œuvre de l'architecture backend et l'optimisation des fonctionnalités de la base de données.`,
             sophie: `Développé un site web immersif mettant en valeur le travail exceptionnel d'un architecte d'intérieur. Le site présente une galerie dynamique mettant en avant un portefeuille diversifié de projets de design intérieur. Les utilisateurs peuvent naviguer de manière transparente à travers les créations de l'architecte, explorant chaque projet avec des images haute résolution et des descriptions détaillées.`,
             booki: `Booki, un projet où j'ai pris en charge le développement HTML et CSS, est un site web convivial qui simplifie le processus de recherche d'hébergements et d'activités dans n'importe quelle ville choisie. J'ai développé une interface intuitive qui améliore l'expérience utilisateur, permettant une exploration sans problème des options d'hébergement et des expériences locales.`,
-            live:'Démo en temps réel',
-            name:'Nom complet',
-            contact:'Contactez moi ici',
-            or:'Ou directement la',
-            message:'Envoyer',
-            subject:'Sujet'
+            live: "Démo en temps réel",
+            name: "Nom complet",
+            contact: "Contactez moi ici",
+            or: "Ou directement la",
+            message: "Envoyer",
+            subject: "Sujet",
+            send: "Message envoyé !",
+            abouttext1:`
+            Bonjour 👋 Je suis Elias Benabou, un développeur web passionné et créatif dédié à la conception de sites web propres et fonctionnels.`,
             
-
+            abouttext2:`Je suis avide d'acquérir de l'expérience et prêt à contribuer au succès de votre projet, alors n'hésitez pas à me contacter et travaillons ensemble !`,
           },
         },
       },
