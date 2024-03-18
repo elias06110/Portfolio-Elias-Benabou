@@ -28,8 +28,8 @@ export default function Projects() {
             </p>
             <h3>React, Scss</h3>
             <div className="project-links flex">
-            <a href="https://elias06110.github.io/Projet-react/" target="_blank"   rel="noreferrer">{t("description.live")}</a>
-              <div className="bar"></div>
+           
+
               <a
                 href="https://github.com/elias06110/Projet-react"
                 target="_blank"   rel="noreferrer"
@@ -73,8 +73,7 @@ export default function Projects() {
             </p>
             <h3> Javascript, Css</h3>
             <div className="project-links flex">
-            <a href="https://elias06110.github.io/Projet_2_Benabou_Elias/" target="_blank"   rel="noreferrer">{t("description.live")}</a>
-              <div className="bar"></div>
+            
               <a
                 href="https://github.com/elias06110/Projet-3"
                 target="_blank"   rel="noreferrer"
